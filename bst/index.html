@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Binary tree visitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div#control
+        {
+            width:100%;
+            position:fixed;
+            bottom: 0px;
+            left:0px;
+            z-index: +1;
+            background-color: rgb(59, 4, 111);
+            color: rgb(255, 255, 255);
+
+        }
+        span#com0
+        {
+            font-size:smaller;
+        }
+        button#h_b
+        {
+            position:fixed;
+            bottom: 0px;
+            right:0px;
+            z-index: +1;
+        }
+    </style>
+    <script src="tree.js"></script>
+</head>
+<html lang="en">
+    <body>
+        <h6>Binary Search Tree:</h6>
+        <div id="tree_view"></div>
+        <pre>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                                    
+            
+        
+            </pre>
+        <div id="control">
+        <pre>Duplicate value not allow:(show console)</pre>
+        <span>Input key:</span><span id="input_s"></span><br>
+        <span>Inorder: </span><span id="inorder"></span><br>
+        <span>Postorder: </span><span id="postorder"></span><br>
+        <span>Preorder: </span><span id="preorder"></span><br><br>
+        <div id="input"><span> Input: </span><input class="ip2" type="text" placeholder="a,b,c,d..." pattern="" id="inputId2" value="" onchange=fn2()><button type="button" onclick=fn2()>insert</button></div>
+        <span id="com0">Enter single key or multiple key separet by comma.</span>
+        <div id="t_length"><span>Tree font: </span><input class="ip3" type="numb" placeholder="numb" pattern=".{1,}" id="inputId3" value="1" maxlength='1' size='1' onchange=view_tree(ref2)></div>
+        <button type="button" onclick=reset()>reset</button>
+        </div>
+        <button id="h_b" type="button" onclick=but_h()>Hide panel</button>
+        <script>
+            function but_h() {
+            var x = document.getElementById("control");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            document.getElementById("h_b").innerHTML="Hide panel";
+            } else {
+            x.style.display = "none";
+            document.getElementById("h_b").innerHTML="Show panel";
+            }
+            }
+        </script>
+    </body>
+</html>
