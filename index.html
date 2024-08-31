@@ -26,12 +26,17 @@
             right:0px;
             z-index: +1;
         }
+
+        #Auth_name
+        {
+            text-align: center;
+        }
     </style>
     <script src="tree.js"></script>
 </head>
 <html lang="en">
     <body>
-        <h6>Binary Search Tree:</h6>
+        <h6>Binary insert:</h6>
         <div id="tree_view"></div>
         <pre>
             
@@ -52,15 +57,20 @@
         
             </pre>
         <div id="control">
-        <pre>Duplicate value not allow:(show console)</pre>
-        <span>Input key:</span><span id="input_s"></span><br>
+        <pre></pre>
+        <span id="comment_s"></span>
+        <span>Input key: </span><span id="input_s"></span><br>
         <span>Inorder: </span><span id="inorder"></span><br>
         <span>Postorder: </span><span id="postorder"></span><br>
-        <span>Preorder: </span><span id="preorder"></span><br><br>
+        <span>Preorder: </span><span id="preorder"></span><br>
+        <span>Search-order: </span><span id="Search-order"></span><br><br>
         <div id="input"><span> Input: </span><input class="ip2" type="text" placeholder="a,b,c,d..." pattern="" id="inputId2" value="" onchange=fn2()><button type="button" onclick=fn2()>insert</button></div>
         <span id="com0">Enter single key or multiple key separet by comma.</span>
+        <div id="input4"><span> Input: </span><input class="ip2" type="text" placeholder="a" pattern="" id="inputId4" value="" size=1 onchange=scearch_elm(ref2)><button type="button" onclick=scearch_elm(ref2)>scearch</button></div><br>
         <div id="t_length"><span>Tree font: </span><input class="ip3" type="numb" placeholder="numb" pattern=".{1,}" id="inputId3" value="1" maxlength='1' size='1' onchange=view_tree(ref2)></div>
-        <button type="button" onclick=reset()>reset</button>
+        <button type="button" onclick=reset()>reset</button> <button type="button" onclick=reset_tree(ref2)>reset color</button>
+    
+    <pre id="Auth_name">Made by Dipankar Kr. Roy</pre>
         </div>
         <button id="h_b" type="button" onclick=but_h()>Hide panel</button>
         <script>
